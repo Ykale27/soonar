@@ -1,0 +1,13 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: azure-blob
+provisioner: kubernetes.io/azure-blob
+parameters:
+
+  storageAccount: demostore5689
+
+  storageAccountKey: RLzdDT+u4n0IFWwB0we3XePCFyU926YrQbBauquw0eUn7jv8LGQQjfK2gL3yZOua7CWQHA0x/D1S+AStFnDjpg==
+  container: democontainer
+  skuName: Standard_LRS
+reclaimPolicy: Retain
